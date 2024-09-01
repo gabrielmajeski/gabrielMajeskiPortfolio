@@ -22,3 +22,40 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Terraform State files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Module directories
+.terraform/
+
+# Terraform plan files
+*.tfplan
+
+# Terraform .tfvars files
+*.tfvars
+
+# Lock file
+.terraform.lock.hcl
+
+# Directory for CLI configuration backups
+*.backup
+
+# Local .terraform directories
+**/.terraform/*
+
+# Ignore .env files, often used for local environment variables
+.env
+
+# Ignore .txt files
+*.txt
+
+# Ignore todo-cli file
+todos.json
+
+# Ignore .old foder
+.old/

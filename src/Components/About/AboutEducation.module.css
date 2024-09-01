@@ -1,8 +1,8 @@
-.itemName {
+.item-title {
   color: #4d5bce !important;
   margin-left: 20px;
 }
 
-.itemNameValue {
+.item-title-value {
   color: #fea55f;
 }

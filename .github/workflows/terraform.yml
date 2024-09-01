@@ -1,0 +1,106 @@
+---
+name: Terraform Deploy
+
+on:
+  push:
+    paths:
+      - "terraform/**"
+  pull_request:
+    paths:
+      - "terraform/**"
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Lint
+        uses: super-linter/super-linter@v7.1.0
+        env:
+          FILTER_REGEX_INCLUDE: .*terraform/.*
+          FIX_TERRAFORM_FMT: true
+          GITHUB_TOKEN: \$\{{ secrets.GITHUB_TOKEN }}
+
+  terraform-plan:
+    name: Terraform plan
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: sa-east-1
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_wrapper: false
+
+      - name: Create tfvars file from secret
+        run: echo "${{ secrets.TFVARS_CONTENT }}" > terraform/terraform.tfvars
+
+      - name: Edit tfvars file to add quotes
+        run: |
+          sed -i 's/s3_bucket_name = \(.*\)/s3_bucket_name = "\1"/' terraform/terraform.tfvars
+          sed -i 's/domain_name = \(.*\)/domain_name = "\1"/' terraform/terraform.tfvars
+          sed -i 's/route53_zone_id = \(.*\)/route53_zone_id = "\1"/' terraform/terraform.tfvars
+          sed -i 's/key_name = \(.*\)/key_name = "\1"/' terraform/terraform.tfvars
+          sed -i 's/allowed_ssh_ip = \(.*\)/allowed_ssh_ip = "\1"/' terraform/terraform.tfvars
+
+      - name: Run Terraform Plan
+        run: |
+          cd $GITHUB_WORKSPACE/terraform
+          terraform init
+          terraform plan --var-file=terraform.tfvars
+
+
+  terraform-apply:
+    name: Terraform apply
+    runs-on: ubuntu-latest
+    needs: terraform-plan
+    environment:
+      name: terraform-apply-approval-gate
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: sa-east-1
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_wrapper: false
+
+      - name: Create tfvars file from secret
+        run: echo "${{ secrets.TFVARS_CONTENT }}" > terraform/terraform.tfvars
+  
+      - name: Edit tfvars file to add quotes
+        run: |
+          sed -i 's/s3_bucket_name = \(.*\)/s3_bucket_name = "\1"/' terraform/terraform.tfvars
+          sed -i 's/domain_name = \(.*\)/domain_name = "\1"/' terraform/terraform.tfvars
+          sed -i 's/route53_zone_id = \(.*\)/route53_zone_id = "\1"/' terraform/terraform.tfvars
+          sed -i 's/key_name = \(.*\)/key_name = "\1"/' terraform/terraform.tfvars
+          sed -i 's/allowed_ssh_ip = \(.*\)/allowed_ssh_ip = "\1"/' terraform/terraform.tfvars
+
+      - name: Run Terraform apply
+        run: |
+          cd $GITHUB_WORKSPACE/terraform
+          terraform init
+          terraform apply --auto-approve --var-file=terraform.tfvars

@@ -5,7 +5,7 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import AboutResume from './AboutResume';
 import AboutEducation from './AboutEducation';
 import AboutWorkExperience from './AboutWorkExperience';
-import JavaScript from '../../assets/JavaScriptIcon';
+import JavaScript from '../../Assets/JavaScriptIcon';
 import useMedia from '../../Hooks/useMedia';
 import AboutCV from './AboutCV';
 import Aside from '../helper/Aside';

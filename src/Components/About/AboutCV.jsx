@@ -3,7 +3,7 @@ import styles from './AboutCV.module.css';
 
 const AboutCV = ({ style }) => {
   return (
-    <div style={style} className={`${styles.container} animeRight`}>
+    <div style={style} className={`${styles.container} anime-right`}>
       <p>Olá!</p>
       <p>Caso queira baixar meu CV basta clicar no botão abaixo.</p>
       <button>

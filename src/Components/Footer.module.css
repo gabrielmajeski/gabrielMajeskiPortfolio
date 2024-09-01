@@ -25,6 +25,7 @@
   color: white;
   transition: 1s;
 }
+
 .footer div:hover svg {
   fill: white;
   transition: 1s;

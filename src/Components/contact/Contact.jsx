@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Contact.module.css';
 import Dropdown from '../dropdown/Dropdown';
-import MailIcon from '../../assets/MailIcon';
-import WhatsIcon from '../../assets/WhatsappIcon';
+import MailIcon from '../../Assets/MailIcon';
+import WhatsIcon from '../../Assets/WhatsappIcon';
 import useForm from '../../Hooks/useForm';
 import useFetch from '../../Hooks/useFetch';
 import Input from '../form/Input';
@@ -16,7 +16,7 @@ import Head from '../helper/Head';
 const opts = [
   {
     text: '(51) 98914-0371',
-    link: 'https://api.whatsapp.com/send?phone=5551598914037',
+    link: 'https://api.whatsapp.com/send?phone=55515989140371',
     icon: <WhatsIcon />,
   },
   {
@@ -66,7 +66,7 @@ const Contact = () => {
         {msgSent ? (
           <FormSent setMsgSent={setMsgSent} />
         ) : (
-          <form onSubmit={handleSubmit} className="animeLeft">
+          <form onSubmit={handleSubmit} className="anime-left">
             <Input
               label={'_nome:'}
               type="text"
@@ -90,9 +90,9 @@ const Contact = () => {
               ></textarea>
             </div>
             {loading ? (
-              <button disabled>Enviando...</button>
+              <button disabled={true}>Enviando...</button>
             ) : (
-              <button>Enviar</button>
+              <button  disabled={false}>Enviar</button>
             )}
           </form>
         )}

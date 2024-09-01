@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Dropdown.module.css';
-import PageUp from '../../assets/PageUp';
+import PageUp from '../../Assets/PageUp';
 import { NavLink } from 'react-router-dom';
 
 const Dropdown = ({ data, text, custom, children, ...props }) => {
   const [active, setActive] = React.useState(true);
   return (
-    <div className={`${styles.container} animeDown`}>
+    <div className={`${styles.container} anime-down`}>
       <p
         className={`${styles.title}`}
         style={{ color: active ? 'white' : '' }}
@@ -19,7 +19,7 @@ const Dropdown = ({ data, text, custom, children, ...props }) => {
       <ul
         className={`${active ? styles.showMenu : styles.hideMenu} ${
           styles.menu
-        } animeLeft`}
+        } anime-left`}
       >
         {data
           ? custom
@@ -31,7 +31,7 @@ const Dropdown = ({ data, text, custom, children, ...props }) => {
                     <a
                       href={opt.link}
                       target="_blank"
-                      className="animeLeft"
+                      className="anime-left"
                       {...props}
                     >
                       {opt.text}

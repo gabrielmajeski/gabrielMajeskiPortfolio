@@ -8,7 +8,7 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   background-color: #01080e;
   overflow-x: hidden;
 }
@@ -18,14 +18,14 @@ h2,
 h3,
 h4,
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 ul,
 li {
   list-style: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 img {
@@ -40,35 +40,36 @@ img {
   border-radius: 0.5em;
 }
 
-.appMain {
+.app-main {
   min-height: 71vh;
   background-color: #011627;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
 }
-.animeLeft {
+
+.anime-left {
   opacity: 0;
   transform: translateX(-20px);
-  animation: animeMoove 0.5s forwards;
+  animation: anime-moove 0.5s forwards;
 }
 
-.animeRight {
+.anime-right {
   opacity: 0;
   transform: translateX(20px);
-  animation: animeMoove 0.5s forwards;
+  animation: anime-moove 0.5s forwards;
 }
 
-.animeTop {
+.anime-top {
   opacity: 0;
   transform: translateY(-20px);
-  animation: animeMoove 0.5s forwards;
+  animation: anime-moove 0.5s forwards;
 }
 
-.animeDown {
+.anime-down {
   opacity: 0;
   transform: translateY(20px);
-  animation: animeMoove 0.5s forwards;
+  animation: anime-moove 0.5s forwards;
 }
 
 .active::before {
@@ -95,16 +96,7 @@ img {
   border-radius: 0.5rem;
 }
 
-@keyframes border_anim {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes animeMoove {
+@keyframes anime-moove {
   to {
     opacity: 1;
     transform: initial;

@@ -3,11 +3,11 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.rightAside {
+.right-aside {
   border: 1px solid #1e2d3d;
   color: white;
 }
 
-.rightAside div:not(:first-of-type) {
+.right-aside div:not(:first-of-type) {
   background: transparent;
 }

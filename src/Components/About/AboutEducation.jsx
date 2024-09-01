@@ -36,16 +36,16 @@ const AboutEducation = () => {
       {education.map((edu) => (
         <>
           <span data-line>
-            <span className={styles.itemName}>instituicao:</span>
-            <span className={styles.itemNameValue}>'{edu.institution}'</span>,
+            <span className={styles["item-title"]}>instituicao:</span>
+            <span className={styles["item-title-value"]}>'{edu.institution}'</span>,
           </span>
           <span data-line>
-            <span className={styles.itemName}>curso:</span>
-            <span className={styles.itemNameValue}>'{edu.course}'</span>,
+            <span className={styles["item-title"]}>curso:</span>
+            <span className={styles["item-title-value"]}>'{edu.course}'</span>,
           </span>
           <span data-line>
-            <span className={styles.itemName}>duracao:</span>
-            <span className={styles.itemNameValue}>'{edu.duration}'</span>,
+            <span className={styles["item-title"]}>duracao:</span>
+            <span className={styles["item-title-value"]}>'{edu.duration}'</span>,
           </span>
           <span data-line>&#125;</span>
         </>
@@ -63,16 +63,16 @@ const AboutEducation = () => {
       {certification.map((cert) => (
         <>
           <span data-line>
-            <span className={styles.itemName}>instituicao:</span>
-            <span className={styles.itemNameValue}>'{cert.institution}'</span>,
+            <span className={styles["item-title"]}>instituicao:</span>
+            <span className={styles["item-title-value"]}>'{cert.institution}'</span>,
           </span>
           <span data-line>
-            <span className={styles.itemName}>curso:</span>
-            <span className={styles.itemNameValue}>'{cert.course}'</span>,
+            <span className={styles["item-title"]}>curso:</span>
+            <span className={styles["item-title-value"]}>'{cert.course}'</span>,
           </span>
           <span data-line>
-            <span className={styles.itemName}>emitido:</span>
-            <span className={styles.itemNameValue}>'{cert.completedAt}'</span>,
+            <span className={styles["item-title"]}>emitido:</span>
+            <span className={styles["item-title-value"]}>'{cert.completedAt}'</span>,
           </span>
           <span data-line>&#125;,</span>
         </>

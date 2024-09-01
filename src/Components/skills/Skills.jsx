@@ -28,6 +28,12 @@ const Skills = () => {
       color: '#FEA55F',
       duration: 5,
     },
+    {
+      name: 'WordPress',
+      level: 50,
+      color: '#FEA55F',
+      duration: 5,
+    },
 
     {
       name: 'Git',
@@ -43,7 +49,7 @@ const Skills = () => {
     },
   ];
   return (
-    <div className={`${styles.container} animeRight`}>
+    <div className={`${styles.container} anime-right`}>
       <h2>Skills</h2>
       <SkillBars skills={skillsData} />
     </div>

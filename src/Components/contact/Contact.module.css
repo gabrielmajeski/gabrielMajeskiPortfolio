@@ -15,56 +15,56 @@ form {
   margin: 0 auto;
 }
 
-form input,
-textarea {
-  border: 1px solid rgba(30, 45, 61, 1);
-  background: rgba(1, 18, 33, 1);
-  border-radius: 0.5rem;
-  padding: 0.8rem;
-  color: rgba(96, 123, 150, 1);
-  width: 22rem;
-}
-
-form input:focus,
-textarea:focus {
-  outline: 1px solid rgba(96, 123, 150, 1);
-}
-
 form label,
 input,
 textarea {
   display: block;
 }
 
+form input,
+textarea {
+  border: 1px solid rgb(30 45 61 );
+  background: rgb(1 18 33 );
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  color: rgb(96 123 150 );
+  width: 22rem;
+}
+
+form input:focus,
+textarea:focus {
+  outline: 1px solid rgb(96 123 150 );
+}
+
 form label {
-  color: rgba(96, 123, 150, 1);
+  color: rgb(96 123 150 );
   margin-bottom: 0.5rem;
   margin-top: 2rem;
 }
 
 form button {
-  background: rgba(28, 43, 58, 1);
+  background: rgb(28 43 58 );
   border-radius: 0.5rem;
   margin-top: 1.5rem;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255 );
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(30, 45, 61, 1);
+  border: 1px solid rgb(30 45 61 );
   font-weight: 450;
   line-height: 18px;
-  letter-spacing: 0em;
   cursor: pointer;
   transition: 0.5s ease;
 }
 
 form button:hover {
-  color: rgba(28, 43, 58, 1);
+  color: rgb(28 43 58 );
   background: #fea55f;
 }
 
-@media (max-width: 1250px) {
+@media (width <= 1250px) {
   code {
     display: none;
   }
+
   .container {
     grid-template-columns: 1fr;
   }
@@ -74,7 +74,7 @@ form button:hover {
   }
 }
 
-@media (max-width: 1050px) {
+@media (width <= 1050px) {
   .container {
     grid-column: 1/-1;
   }

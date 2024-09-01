@@ -3,7 +3,7 @@ import styles from './FormSent.module.css';
 
 const FormSent = ({ setMsgSent }) => {
   return (
-    <div className={`${styles.container} animeDown`}>
+    <div className={`${styles.container} anime-down`}>
       <p>Muito obrigado!</p>
       <p>Sua mensagem foi enviada. Em breve entrarei em contato!</p>
       <button className={styles.button} onClick={() => setMsgSent(false)}>

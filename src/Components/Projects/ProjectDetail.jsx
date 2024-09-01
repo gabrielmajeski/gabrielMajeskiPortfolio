@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './ProjectDetail.module.css';
-import GitIcon from '../../assets/GitIcon';
-import EyeIcon from '../../assets/EyeIcon';
+import GitIcon from '../../Assets/GitIcon';
+import EyeIcon from '../../Assets/EyeIcon';
 
 const ProjectDetail = ({ data }) => {
   return (
-    <div className={`${styles.container} animeDown`}>
+    <div className={`${styles.container} anime-down`}>
       <div className={styles.img}>
         <img src={data.img.src} alt={data.img.alt} />
       </div>
@@ -13,7 +13,7 @@ const ProjectDetail = ({ data }) => {
         <h2>{data.name}</h2>
       </div>
       <div className={styles.tags}>
-        <p>Tecnologias : </p>
+        <p>Tecnologias: </p>
         <ul>
           {data.tags.map((tag, index) => (
             <li key={index}>
@@ -25,7 +25,7 @@ const ProjectDetail = ({ data }) => {
       <div className={styles.description}>
         <p>{data.description}</p>
       </div>
-      <div className={styles.buttonContainer}>
+      <div className={styles["button-container"]}>
         <a href={data.gitHubLink} target="_blank" className={styles.button}>
           <GitIcon /> <p>GitHub</p>
         </a>

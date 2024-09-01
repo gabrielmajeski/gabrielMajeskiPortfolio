@@ -13,28 +13,27 @@
 .container a {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255 255 255);
   transition: 0.5s ease;
 }
 
 .container button {
-  background: rgba(28, 43, 58, 1);
+  background: rgb(28 43 58);
   border-radius: 0.5rem;
   margin-top: 1.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(30, 45, 61, 1);
+  border: 1px solid rgb(30 45 61);
   font-weight: 450;
   line-height: 18px;
-  letter-spacing: 0em;
   cursor: pointer;
   transition: 0.5s ease;
 }
 
 .container button:hover {
-  color: rgba(28, 43, 58, 1);
+  color: rgb(28 43 58 );
   background: #fea55f;
 }
 
 .container a:hover {
-  color: rgba(28, 43, 58, 1);
+  color: rgb(28 43 58 );
 }
