@@ -4,7 +4,7 @@ import styles from './CodeBlock.module.css';
 const CodeBlock = ({ children, color, className }) => {
   return (
     <code
-      className={`${styles.code} ${className} anime-right`}
+      className={`${styles.code} ${className} animeRight`}
       style={{ counterReset: 'line', color: color }}
     >
       {...children}

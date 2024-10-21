@@ -10,17 +10,17 @@ const Home = () => {
         title="Home"
         description="Home do portfolio, com dados sobre skills de programação"
       />
-      <div className={`${styles.tittle} anime-left`}>
+      <div className={`${styles.tittle} animeLeft`}>
         <div>
           <h1>Gabriel Majeski</h1>
-          <p className={styles["front-title"]}> {'>'} Front-end Developer</p>
+          <p className={styles.frontTittle}> {'>'} Front-end Developer</p>
         </div>
         <div>
           <p>// Você pode visitar minha página no GitHub</p>
           <p>
             <span>const</span> <span>githubLink</span> ={' '}
             <a
-              className={styles["git-link"]}
+              className={styles.gitLink}
               href="https://github.com/gabrielmajeski"
               target="_blank"
             >

@@ -2,17 +2,24 @@ FROM node:18
 
 WORKDIR /app
 
-COPY package*.json ./
+# Instalação do Vite com uma versão específica
+RUN npm install vite@0.20.2
 
-RUN npm cache clean --force && \
-	npm install
+# Copia os arquivos de definição de dependências
+COPY package.json ./
+COPY package-lock.json ./
 
+# Instalação de dependências do projeto
+RUN npm install
+
+# Copia o restante dos arquivos do projeto
 COPY . .
 
+# Executa o comando de build
 RUN npm run build
 
+# Expõe a porta 8080
 EXPOSE 8080
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f http://localhost:8080 || exit 1
-
+# Comando de execução do servidor de desenvolvimento
 CMD [ "npm", "run", "dev" ]

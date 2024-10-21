@@ -2,16 +2,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: white;
-  place-items: center;
+  justify-items: center;
+  align-items: center;
   grid-column: 1 / -1;
-}
-
-.tittle span {
-  color: rgb(67 217 173) !important;
 }
 
 .tittle span:first-of-type {
   color: #4d5bce !important;
+}
+
+.tittle span {
+  color: rgba(67, 217, 173, 1) !important;
 }
 
 .container h1 {
@@ -19,7 +20,7 @@
   font-weight: 300;
 }
 
-.front-tittle {
+.frontTittle {
   font-size: 1.5rem;
   color: #4d5bce;
 }
@@ -28,16 +29,16 @@
   margin-bottom: 4rem;
 }
 
-.git-link {
+.gitLink {
   text-decoration: none;
   color: #e99287;
 }
 
-.git-link:hover {
+.gitLink:hover {
   text-decoration: underline;
 }
 
-@media (width <= 1250px) {
+@media (max-width: 1250px) {
   .container {
     grid-template-columns: 1fr;
     margin-top: 2rem;

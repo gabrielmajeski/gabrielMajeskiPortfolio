@@ -6,7 +6,7 @@
   display: block;
   border-radius: 0.5rem;
   background-color: #01080e;
-  box-shadow: 0 8px 32px 0 rgb(255 255 255 / 10%);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
 }
 
@@ -27,11 +27,10 @@
   border-bottom: 1px solid #1e2d3d;
   border-top: 1px solid #1e2d3d;
   align-items: center;
-  
 }
 
 .tags ul li {
-  background-color: rgb(28 43 58 );
+  background-color: rgba(28, 43, 58, 1);
   border-radius: 0.5rem;
   color: white;
   padding: 0.2rem;
@@ -46,23 +45,24 @@
 .tags,
 .button,
 .description,
-.button-container {
+.buttonContainer {
   padding: 0.5rem;
 }
 
-.button-container {
+.buttonContainer {
   display: flex;
   gap: 10px;
 }
 
 .button {
-  background: rgb(28 43 58);
+  background: rgba(28, 43, 58, 1);
   border-radius: 0.5rem;
-  color: rgb(255 255 255);
+  color: rgba(255, 255, 255, 1);
   padding: 0.5rem 1rem;
-  border: 1px solid rgb(30 45 61);
+  border: 1px solid rgba(30, 45, 61, 1);
   font-weight: 450;
   line-height: 18px;
+  letter-spacing: 0em;
   cursor: pointer;
   transition: 0.5s ease;
   display: flex;
@@ -73,7 +73,7 @@
   margin-left: 5px;
 }
 
-.button-container a {
+.buttonContainer a {
   text-decoration: none;
 }
 
@@ -83,25 +83,16 @@
 }
 
 .button:hover {
-  color: rgb(28 43 58);
+  color: rgba(28, 43, 58, 1);
   background: #fea55f;
 }
 
-@media (width <= 1130px) {
+@media (max-width: 1130px) {
   .container {
     width: auto;
   }
 
-  .tags {
-    flex-direction: column;
-  }
-
   .tags ul li {
-    margin-top: 10px;
     padding: 0.1rem;
-  }
-
-  .button-container {
-    justify-content: space-between;
   }
 }
