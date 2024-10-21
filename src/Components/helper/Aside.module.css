@@ -10,7 +10,6 @@
   padding: 0.5rem !important;
   border: none !important;
   display: flex;
-  fill: white;
 }
 
 .aside label {
@@ -21,6 +20,10 @@
 
 .aside svg {
   width: 16px;
+}
+
+.aside li {
+  fill: white;
 }
 
 .aside a {
@@ -38,16 +41,14 @@
 .aside ul li:has(:global(.active)) {
   background-color: #fea55f;
 }
-
 .aside :global(.active) {
   color: white !important;
 }
-
 .aside ul li:has(:global(.active)) svg {
   fill: white;
 }
 
-@media (width <= 1050px) {
+@media (max-width: 1050px) {
   .aside {
     grid-column: 1/-1;
   }

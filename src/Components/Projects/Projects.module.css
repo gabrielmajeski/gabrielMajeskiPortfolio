@@ -1,23 +1,29 @@
-.project-labels {
+.projectLabels {
   cursor: pointer;
   color: #607b96;
   transition: 0.5s ease;
 }
 
-.project-labels svg {
+.projectLabels svg {
   transition: none !important;
+}
+
+.projectLabels:hover {
+  color: white;
+  fill: white;
+}
+
+.projectLabels input {
+  display: none;
+}
+
+.projectLabels svg {
   margin-right: 10px;
   margin-left: 8px;
 }
 
-.project-labels:hover {
-  color: white;
-  fill: white;
+.projectLabels:hover {
   background-color: #fea55f;
-}
-
-.project-labels input {
-  display: none;
 }
 
 .container {
@@ -31,26 +37,26 @@
   padding: 1rem;
 }
 
-@media (width <= 1850px) {
+@media (max-width: 1850px) {
   .container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (width <= 1400px) {
+@media (max-width: 1400px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (width <= 1050px) {
+@media (max-width: 1050px) {
   .container {
     grid-column: 1 / -1;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (width <= 800px) {
+@media (max-width: 800px) {
   .container {
     grid-template-columns: 1fr;
   }

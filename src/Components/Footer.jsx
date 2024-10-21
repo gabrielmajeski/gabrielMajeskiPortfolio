@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import GitIcon from '../Assets/GitIcon';
-import LinkedinIcon from '../Assets/LinkedinIcon';
+import GitIcon from '../assets/GitIcon';
+import LinkedinIcon from '../assets/LinkedinIcon';
 
 const Footer = () => {
   return (

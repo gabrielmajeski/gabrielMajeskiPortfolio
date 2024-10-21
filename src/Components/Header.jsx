@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
-import HamburgerMenu from '../Assets/HamburgerMenu';
-import CloseButton from '../Assets/CloseButton';
+import HamburgerMenu from '../assets/HamburgerMenu';
+import CloseButton from '../assets/CloseButton';
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -16,7 +16,7 @@ const Header = () => {
       </div>
       <ul
         onClick={() => setIsOpen(false)}
-        className={`anime-top ${isOpen ? styles["open-menu"] : ''} ${styles["nav-ul"]}`}
+        className={`animeTop ${isOpen ? styles.openMenu : ''} ${styles.navUl}`}
       >
         <li>
           <NavLink to="/" end>

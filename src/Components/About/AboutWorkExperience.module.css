@@ -3,18 +3,22 @@
   grid-template-columns: 1fr;
   grid-column: 3 / -1;
   height: 69.4vh;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
-.functions-list {
+.functionsList {
   margin-left: 60px !important;
   color: #fea55f;
 }
 
-.item-title {
+.itemName {
   color: #4d5bce !important;
 }
 
-.item-title-value {
+.itemNameValue {
   color: #fea55f;
+}
+
+.container {
 }

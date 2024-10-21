@@ -74,24 +74,24 @@ const AboutWorkExperience = () => {
         <>
           <span data-line>&#123;</span>
           <span data-line>
-            <span className={styles["item-title"]}>empresa:</span>
-            <span className={styles["item-title-value"]}> '{exp.company}'</span>,
+            <span className={styles.itemName}>empresa:</span>
+            <span className={styles.itemNameValue}> '{exp.company}'</span>,
           </span>
           <span data-line>
-            <span className={styles["item-title"]}>cargo:</span>
-            <span className={styles["item-title-value"]}> '{exp.job}'</span>,
+            <span className={styles.itemName}>cargo:</span>
+            <span className={styles.itemNameValue}> '{exp.job}'</span>,
           </span>
           <span data-line>
-            <span className={styles["item-title"]}>periodo:</span>
-            <span className={styles["item-title-value"]}> '{exp.period}'</span>,
+            <span className={styles.itemName}>periodo:</span>
+            <span className={styles.itemNameValue}> '{exp.period}'</span>,
           </span>
           <span data-line>
-            <span className={styles["item-title"]}>funcoes:</span>
+            <span className={styles.itemName}>funcoes:</span>
             <span> [</span>
           </span>
           {exp.functions.map((f, index) => (
             <span className={styles.functions} key={index} data-line>
-              <span className={styles["functions-list"]}>'{f}'</span>
+              <span className={styles.functionsList}>'{f}'</span>
               <span>,</span>
             </span>
           ))}

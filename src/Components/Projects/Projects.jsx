@@ -2,9 +2,9 @@ import React from 'react';
 import Aside from '../helper/Aside';
 import Dropdown from '../dropdown/Dropdown';
 import styles from './Projects.module.css';
-import ReactJS from '../../Assets/ReactJS';
-import Html5 from '../../Assets/Html5';
-import TerminalIcon from '../../Assets/TerminalIcon';
+import ReactJS from '../../assets/ReactJS';
+import Html5 from '../../assets/Html5';
+import TerminalIcon from '../../assets/TerminalIcon';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 
@@ -100,7 +100,7 @@ const Projects = () => {
       <Aside>
         <Dropdown text={'Projetos'}>
           {filtersValue.map((filters) => (
-            <label className={styles["project-labels"]} key={filters.filter}>
+            <label className={styles.projectLabels} key={filters.filter}>
               <input
                 type="checkbox"
                 value={filters.filter}
@@ -119,7 +119,7 @@ const Projects = () => {
           setModalProject={setModalProject}
         />
       )}
-      <div className={`${styles.container} anime-right`}>
+      <div className={`${styles.container} animeRight`}>
         {projects &&
           projects.map((p, index) => (
             <ProjectCard
