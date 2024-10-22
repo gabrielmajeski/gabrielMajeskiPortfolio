@@ -14,12 +14,10 @@ const App = () => {
         <Header />
         <main className="appMain">
           <Routes>
-            {["/", "/gabrielMajeskiPortfolio/"].map((path, index) => {
-              return <Route path={path} element={<Home />} key={index} />;
-            })}
-            <Route path="/gabrielMajeskiPortfolio/about/*" element={<About />} />
-            <Route path="/gabrielMajeskiPortfolio/projects/*" element={<Projects />} />
-            <Route path="/gabrielMajeskiPortfolio/contact" element={<Contact />} />
+            <Route path="/" element={<Home />} />;
+            <Route path="/about/*" element={<About />} />
+            <Route path="/projects/*" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
