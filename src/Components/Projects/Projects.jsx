@@ -17,7 +17,7 @@ const projectsData = [
     name: 'Dogs',
     tags: ['ReactJS', 'CSS Modules', 'Custom Hooks'],
     img: {
-      src: 'https://gabrielmajeski-portfolio.s3.amazonaws.com/homeDogs.png',
+      src: 'https://majeski-portfolio.s3.us-east-1.amazonaws.com/imgs/dogs.png',
       alt: 'Imagem padrão',
     },
     description:
@@ -31,7 +31,7 @@ const projectsData = [
     name: 'Pokedex',
     tags: ['ReactJS', 'CSS Modules', 'Custom Hooks'],
     img: {
-      src: 'https://gabrielmajeski-portfolio.s3.amazonaws.com/homePokedex.png',
+      src: 'https://majeski-portfolio.s3.us-east-1.amazonaws.com/imgs/pokeapi.png',
       alt: 'Imagem padrão',
     },
     description:
@@ -45,7 +45,7 @@ const projectsData = [
     name: 'Santa Ideia',
     tags: ['HTML', 'CSS', 'JS'],
     img: {
-      src: 'https://gabrielmajeski-portfolio.s3.amazonaws.com/homeSantaIdeia.png',
+      src: 'https://us-east-1.console.aws.amazon.com/s3/object/majeski-portfolio?region=us-east-1&bucketType=general&prefix=imgs/santaideia.png',
       alt: 'Imagem padrão',
     },
     description:
@@ -59,7 +59,7 @@ const projectsData = [
     name: 'BikCraft',
     tags: ['HTML', 'CSS', 'JS'],
     img: {
-      src: 'https://gabrielmajeski-portfolio.s3.amazonaws.com/homeBikcraft.png',
+      src: 'https://majeski-portfolio.s3.us-east-1.amazonaws.com/imgs/bikcraft.png',
       alt: 'Imagem padrão',
     },
     description:
