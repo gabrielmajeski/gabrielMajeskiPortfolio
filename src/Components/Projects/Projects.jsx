@@ -45,7 +45,7 @@ const projectsData = [
     name: 'Santa Ideia',
     tags: ['HTML', 'CSS', 'JS'],
     img: {
-      src: 'https://us-east-1.console.aws.amazon.com/s3/object/majeski-portfolio?region=us-east-1&bucketType=general&prefix=imgs/santaideia.png',
+      src: 'https://majeski-portfolio.s3.us-east-1.amazonaws.com/imgs/santaideia.png',
       alt: 'Imagem padrão',
     },
     description:
