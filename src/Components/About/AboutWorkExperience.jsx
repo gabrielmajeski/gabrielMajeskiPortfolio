@@ -4,6 +4,16 @@ import CodeBlock from '../contact/CodeBlock';
 
 const experience = [
   {
+    company: 'IBCMED | Inspirali',
+    job: 'Desenvolvedor Javascript',
+    period: 'Maio de 2024 - Atualmente',
+    functions: [
+      'Desenvolvimento web utilizando React.js, TypeScript e SASS.',
+      'Suporte e desenvolvimento da plataforma Sydle utilizando Javascript.',
+      'Colaboração com equipes multidisciplinares para alinhar os esforços de desenvolvimento web aos objetivos gerais da empresa.',
+    ],
+  },
+  {
     company: 'Denakop',
     job: 'Web Analyst',
     period: 'Dezembro de 2022 - Janeiro de 2024',

@@ -28,16 +28,15 @@ const Skills = () => {
       color: '#FEA55F',
       duration: 5,
     },
-
     {
-      name: 'Git',
-      level: 50,
+      name: 'Typescript',
+      level: 40,
       color: '#FEA55F',
       duration: 5,
     },
     {
-      name: 'MongoDB',
-      level: 30,
+      name: 'Git',
+      level: 40,
       color: '#FEA55F',
       duration: 5,
     },
